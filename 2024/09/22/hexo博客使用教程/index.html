@@ -1,0 +1,280 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Hexo博客使用教程：从创建到部署的完整指南 | daxiong's blog</title><meta name="author" content="daxiong"><meta name="copyright" content="daxiong"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Hexo博客使用教程：从创建到部署的完整指南作为一个静态博客框架，Hexo 提供了简单易用的博客解决方案。本教程将帮助你掌握 Hexo 的基本操作，包括创建新文章、编辑文章、添加图片、预览和部署等功能。即使你对命令行不熟悉，按照本教程也能轻松管理你的博客。 1. 博客基础知识在开始前，了解几个基本概念：  Hexo：一个快速、简洁且高效的博客框架，使用 Markdown 编写文章 Markdown">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo博客使用教程：从创建到部署的完整指南">
+<meta property="og:url" content="https://88daxiong.github.io/2024/09/22/hexo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/index.html">
+<meta property="og:site_name" content="daxiong&#39;s blog">
+<meta property="og:description" content="Hexo博客使用教程：从创建到部署的完整指南作为一个静态博客框架，Hexo 提供了简单易用的博客解决方案。本教程将帮助你掌握 Hexo 的基本操作，包括创建新文章、编辑文章、添加图片、预览和部署等功能。即使你对命令行不熟悉，按照本教程也能轻松管理你的博客。 1. 博客基础知识在开始前，了解几个基本概念：  Hexo：一个快速、简洁且高效的博客框架，使用 Markdown 编写文章 Markdown">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://88daxiong.github.io/image/bald_eagle.jpeg">
+<meta property="article:published_time" content="2024-09-22T07:00:00.000Z">
+<meta property="article:modified_time" content="2025-05-12T02:48:14.699Z">
+<meta property="article:author" content="daxiong">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="博客">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://88daxiong.github.io/image/bald_eagle.jpeg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://88daxiong.github.io/2024/09/22/hexo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Hexo博客使用教程：从创建到部署的完整指南',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-05-12 10:48:14'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><script src="https://npm.elemecdn.com/echarts@4.9.0/dist/echarts.min.js"></script><script src="https://npm.elemecdn.com/echarts@4.9.0/map/js/china.js"></script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/image/bald_eagle.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="daxiong's blog"><span class="site-name">daxiong's blog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Hexo博客使用教程：从创建到部署的完整指南</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-09-22T07:00:00.000Z" title="发表于 2024-09-22 15:00:00">2024-09-22</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-05-12T02:48:14.699Z" title="更新于 2025-05-12 10:48:14">2025-05-12</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/">技术教程</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.7k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>5分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Hexo博客使用教程：从创建到部署的完整指南"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Hexo博客使用教程：从创建到部署的完整指南"><a href="#Hexo博客使用教程：从创建到部署的完整指南" class="headerlink" title="Hexo博客使用教程：从创建到部署的完整指南"></a>Hexo博客使用教程：从创建到部署的完整指南</h1><p>作为一个静态博客框架，Hexo 提供了简单易用的博客解决方案。本教程将帮助你掌握 Hexo 的基本操作，包括创建新文章、编辑文章、添加图片、预览和部署等功能。即使你对命令行不熟悉，按照本教程也能轻松管理你的博客。</p>
+<h2 id="1-博客基础知识"><a href="#1-博客基础知识" class="headerlink" title="1. 博客基础知识"></a>1. 博客基础知识</h2><p>在开始前，了解几个基本概念：</p>
+<ul>
+<li><strong>Hexo</strong>：一个快速、简洁且高效的博客框架，使用 Markdown 编写文章</li>
+<li><strong>Markdown</strong>：一种轻量级标记语言，易于学习，可以快速排版</li>
+<li><strong>Front Matter</strong>：文章开头的 YAML 格式信息，定义标题、日期、标签等元数据</li>
+<li><strong>部署（Deploy）</strong>：将本地博客发布到网络服务器的过程</li>
+</ul>
+<h2 id="2-创建新博客文章"><a href="#2-创建新博客文章" class="headerlink" title="2. 创建新博客文章"></a>2. 创建新博客文章</h2><h3 id="方法一：使用命令行创建（推荐）"><a href="#方法一：使用命令行创建（推荐）" class="headerlink" title="方法一：使用命令行创建（推荐）"></a>方法一：使用命令行创建（推荐）</h3><ol>
+<li>打开终端（Terminal）</li>
+<li>进入博客根目录（可以在终端中输入 <code>cd</code> 后空格，然后拖动博客文件夹到终端窗口）</li>
+<li>输入以下命令：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new post <span class="string">&quot;文章标题&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>例如，创建一篇名为”我的第一篇博客”的文章：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new post <span class="string">&quot;我的第一篇博客&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>这个命令会在 <code>source/_posts</code> 目录下创建一个 <code>我的第一篇博客.md</code> 文件，同时创建同名文件夹用于存放图片等资源。</p>
+<h3 id="方法二：手动创建"><a href="#方法二：手动创建" class="headerlink" title="方法二：手动创建"></a>方法二：手动创建</h3><p>如果你不想使用命令行，也可以手动创建：</p>
+<ol>
+<li>打开 <code>source/_posts</code> 目录</li>
+<li>创建一个新的 <code>.md</code> 文件，如 <code>我的第一篇博客.md</code></li>
+<li>在文件开头添加 Front Matter：</li>
+</ol>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 我的第一篇博客</span><br><span class="line">date: 2024-09-22 15:30:00</span><br><span class="line">tags:</span><br><span class="line"><span class="bullet">  -</span> 标签1</span><br><span class="line"><span class="bullet">  -</span> 标签2</span><br><span class="line">categories:</span><br><span class="line"><span class="section">  - 分类名称</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"></span><br><span class="line">这里是文章内容...</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>同时在 <code>source/_posts</code> 目录下创建同名文件夹（如 <code>我的第一篇博客</code>），用于存放文章相关的图片等资源</li>
+</ol>
+<h2 id="3-编辑博客内容"><a href="#3-编辑博客内容" class="headerlink" title="3. 编辑博客内容"></a>3. 编辑博客内容</h2><h3 id="Markdown-基础语法"><a href="#Markdown-基础语法" class="headerlink" title="Markdown 基础语法"></a>Markdown 基础语法</h3><p>Hexo 使用 Markdown 语法编写文章，以下是一些基础语法：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 一级标题</span></span><br><span class="line"><span class="section">## 二级标题</span></span><br><span class="line"><span class="section">### 三级标题</span></span><br><span class="line"></span><br><span class="line"><span class="strong">**粗体文字**</span></span><br><span class="line"><span class="emphasis">*斜体文字*</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> 无序列表项</span><br><span class="line"><span class="bullet">-</span> 无序列表项</span><br><span class="line"></span><br><span class="line"><span class="bullet">1.</span> 有序列表项</span><br><span class="line"><span class="bullet">2.</span> 有序列表项</span><br><span class="line"></span><br><span class="line"><span class="quote">&gt; 引用文字</span></span><br><span class="line"></span><br><span class="line">[<span class="string">链接文字</span>](<span class="link">https://example.com</span>)</span><br><span class="line"></span><br><span class="line">![<span class="string">图片描述</span>](<span class="link">图片路径</span>)</span><br><span class="line"></span><br><span class="line"><span class="code">`行内代码`</span></span><br><span class="line"></span><br><span class="line">​<span class="code">```python</span></span><br><span class="line"><span class="code"># 代码块</span></span><br><span class="line"><span class="code">def hello():</span></span><br><span class="line"><span class="code">    print(&quot;Hello, World!&quot;)</span></span><br><span class="line"><span class="code">​```</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="添加图片"><a href="#添加图片" class="headerlink" title="添加图片"></a>添加图片</h3><p>由于已经开启了 <code>post_asset_folder</code>，每篇文章都会有自己的资源文件夹。添加图片的步骤：</p>
+<ol>
+<li>将图片放入文章同名文件夹中，例如 <code>source/_posts/我的第一篇博客/image.jpg</code></li>
+<li>在文章中使用以下语法引用图片：</li>
+</ol>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">图片描述</span>](<span class="link">image.jpg</span>)</span><br></pre></td></tr></table></figure>
+
+<p>如果想要更精确地控制图片，可以使用 Hexo 的标签插件：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset<span class="emphasis">_img image.jpg 图片描述 %&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="4-预览博客"><a href="#4-预览博客" class="headerlink" title="4. 预览博客"></a>4. 预览博客</h2><p>编辑完文章后，你可能想要在发布前预览效果。执行以下步骤：</p>
+<ol>
+<li>打开终端，进入博客根目录</li>
+<li>执行以下命令：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo server</span><br></pre></td></tr></table></figure>
+
+<p>这个命令会清理之前生成的文件，并启动本地服务器。然后，你可以在浏览器中访问 <code>http://localhost:4000</code> 预览你的博客。</p>
+<p>如果你不想使用命令行，可以创建一个批处理文件（Windows）或脚本（Mac&#x2F;Linux）来简化这个过程：</p>
+<p><strong>Windows (preview.bat)</strong>:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">hexo clean &amp;&amp; hexo server</span><br></pre></td></tr></table></figure>
+
+<p><strong>Mac&#x2F;Linux (preview.sh)</strong>:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">hexo clean &amp;&amp; hexo server</span><br></pre></td></tr></table></figure>
+
+<p>然后双击这个文件即可启动预览。</p>
+<h2 id="5-修改和重命名博客"><a href="#5-修改和重命名博客" class="headerlink" title="5. 修改和重命名博客"></a>5. 修改和重命名博客</h2><h3 id="修改博客内容"><a href="#修改博客内容" class="headerlink" title="修改博客内容"></a>修改博客内容</h3><p>直接编辑 <code>source/_posts</code> 目录下的对应 <code>.md</code> 文件即可。</p>
+<h3 id="重命名博客"><a href="#重命名博客" class="headerlink" title="重命名博客"></a>重命名博客</h3><p>重命名博客涉及三个部分：文件名、文章标题和资源文件夹名称。</p>
+<ol>
+<li><p><strong>修改文章标题</strong>：<br>打开文章的 <code>.md</code> 文件，修改 Front Matter 中的 <code>title</code> 字段：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">新的文章标题</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>重命名文件</strong>：<br>直接将 <code>source/_posts</code> 目录下的 <code>.md</code> 文件重命名，如 <code>旧标题.md</code> → <code>新标题.md</code></p>
+</li>
+<li><p><strong>重命名资源文件夹</strong>：<br>同样将 <code>source/_posts</code> 目录下的同名文件夹重命名，如 <code>旧标题</code> → <code>新标题</code></p>
+</li>
+</ol>
+<p>完成后，运行 <code>hexo clean &amp;&amp; hexo server</code> 查看更改是否生效。</p>
+<h2 id="6-部署博客"><a href="#6-部署博客" class="headerlink" title="6. 部署博客"></a>6. 部署博客</h2><p>完成编辑后，就可以将博客部署到网络上。根据当前配置，你的博客会部署到 GitHub Pages。</p>
+<h3 id="方法一：使用命令行部署"><a href="#方法一：使用命令行部署" class="headerlink" title="方法一：使用命令行部署"></a>方法一：使用命令行部署</h3><ol>
+<li>打开终端，进入博客根目录</li>
+<li>执行以下命令：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>这个命令会清理缓存，生成静态文件，并将它们部署到 GitHub Pages。</p>
+<h3 id="方法二：使用批处理文件-脚本部署"><a href="#方法二：使用批处理文件-脚本部署" class="headerlink" title="方法二：使用批处理文件&#x2F;脚本部署"></a>方法二：使用批处理文件&#x2F;脚本部署</h3><p>创建一个部署脚本，以后可以直接双击执行：</p>
+<p><strong>Windows (deploy.bat)</strong>:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">hexo clean &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p><strong>Mac&#x2F;Linux (deploy.sh)</strong>:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">hexo clean &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>在 Mac&#x2F;Linux 上，你可能需要先给脚本添加执行权限：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> +x deploy.sh</span><br></pre></td></tr></table></figure>
+
+<h3 id="部署后查看"><a href="#部署后查看" class="headerlink" title="部署后查看"></a>部署后查看</h3><p>部署完成后，访问你的 GitHub Pages 地址查看博客：<code>https://88daxiong.github.io</code></p>
+<h2 id="7-常见问题解决"><a href="#7-常见问题解决" class="headerlink" title="7. 常见问题解决"></a>7. 常见问题解决</h2><h3 id="命令行不工作？"><a href="#命令行不工作？" class="headerlink" title="命令行不工作？"></a>命令行不工作？</h3><p>如果你在终端中输入 <code>hexo</code> 相关命令时遇到问题，可能是因为 Hexo 未正确安装或未添加到系统路径。尝试以下方法：</p>
+<ol>
+<li>确保已安装 Node.js</li>
+<li>尝试使用完整路径：<code>npx hexo &lt;命令&gt;</code></li>
+</ol>
+<h3 id="图片无法显示？"><a href="#图片无法显示？" class="headerlink" title="图片无法显示？"></a>图片无法显示？</h3><ol>
+<li>确保图片放在了文章的同名文件夹中</li>
+<li>检查文章中的图片路径是否正确</li>
+<li>确保使用了正确的图片引用语法</li>
+</ol>
+<h3 id="部署失败？"><a href="#部署失败？" class="headerlink" title="部署失败？"></a>部署失败？</h3><ol>
+<li>检查 <code>_config.yml</code> 中的部署配置是否正确</li>
+<li>确保 GitHub 令牌（如果使用）未过期</li>
+<li>查看终端输出的错误信息，进行相应处理</li>
+</ol>
+<h2 id="8-进阶技巧"><a href="#8-进阶技巧" class="headerlink" title="8. 进阶技巧"></a>8. 进阶技巧</h2><h3 id="创建草稿"><a href="#创建草稿" class="headerlink" title="创建草稿"></a>创建草稿</h3><p>如果你想创建草稿（不会立即发布的文章）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new draft <span class="string">&quot;草稿标题&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>草稿会保存在 <code>source/_drafts</code> 目录。要预览草稿，使用：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server --draft</span><br></pre></td></tr></table></figure>
+
+<p>将草稿发布为正式文章：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo publish <span class="string">&quot;草稿标题&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义永久链接"><a href="#自定义永久链接" class="headerlink" title="自定义永久链接"></a>自定义永久链接</h3><p>如果你想为某篇文章自定义 URL，可以在 Front Matter 中添加 <code>permalink</code> 字段：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">我的文章</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">custom-url/</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="使用标签和分类"><a href="#使用标签和分类" class="headerlink" title="使用标签和分类"></a>使用标签和分类</h3><p>在 Front Matter 中添加标签和分类，可以更好地组织你的文章：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">我的文章</span></span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">技术</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">编程</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">Python</span></span><br><span class="line"><span class="attr">categories:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">学习笔记</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="9-总结"><a href="#9-总结" class="headerlink" title="9. 总结"></a>9. 总结</h2><p>通过本教程，你已经掌握了 Hexo 博客的基本操作，包括创建、编辑、预览和部署文章。即使对命令行不熟悉，你也可以通过创建简单的脚本来简化这些操作。随着使用的深入，你会发现 Hexo 提供了更多强大的功能，可以让你的博客更加个性化和专业化。</p>
+<p>祝你的博客之旅愉快！ </p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://88daxiong.github.io">daxiong</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://88daxiong.github.io/2024/09/22/hexo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">https://88daxiong.github.io/2024/09/22/hexo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://88daxiong.github.io" target="_blank">daxiong's blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/hexo/">hexo</a><a class="post-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/">教程</a><a class="post-meta__tags" href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a></div><div class="post_share"><div class="social-share" data-image="/image/bald_eagle.jpeg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/09/23/%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8BLLM%E7%9A%84%E8%AF%84%E6%B5%8B%E5%9F%BA%E5%87%86%E6%95%B0%E6%8D%AE%E9%9B%86/" title="大语言模型LLM的评测基准数据集"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">大语言模型LLM的评测基准数据集</div></div></a></div><div class="next-post pull-right"><a href="/2024/09/19/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%87%E4%BB%BD%E4%B8%8E%E6%81%A2%E5%A4%8D/" title="mysql数据库备份与恢复"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">mysql数据库备份与恢复</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/image/bald_eagle.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">daxiong</div><div class="author-info__description">Stay Hungry, Stay Foolish</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/88daxiong"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">缘起性空</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B%EF%BC%9A%E4%BB%8E%E5%88%9B%E5%BB%BA%E5%88%B0%E9%83%A8%E7%BD%B2%E7%9A%84%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97"><span class="toc-number">1.</span> <span class="toc-text">Hexo博客使用教程：从创建到部署的完整指南</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%8D%9A%E5%AE%A2%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">1.1.</span> <span class="toc-text">1. 博客基础知识</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%88%9B%E5%BB%BA%E6%96%B0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0"><span class="toc-number">1.2.</span> <span class="toc-text">2. 创建新博客文章</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80%EF%BC%9A%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%88%9B%E5%BB%BA%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="toc-number">1.2.1.</span> <span class="toc-text">方法一：使用命令行创建（推荐）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C%EF%BC%9A%E6%89%8B%E5%8A%A8%E5%88%9B%E5%BB%BA"><span class="toc-number">1.2.2.</span> <span class="toc-text">方法二：手动创建</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E7%BC%96%E8%BE%91%E5%8D%9A%E5%AE%A2%E5%86%85%E5%AE%B9"><span class="toc-number">1.3.</span> <span class="toc-text">3. 编辑博客内容</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Markdown-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95"><span class="toc-number">1.3.1.</span> <span class="toc-text">Markdown 基础语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87"><span class="toc-number">1.3.2.</span> <span class="toc-text">添加图片</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E9%A2%84%E8%A7%88%E5%8D%9A%E5%AE%A2"><span class="toc-number">1.4.</span> <span class="toc-text">4. 预览博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E4%BF%AE%E6%94%B9%E5%92%8C%E9%87%8D%E5%91%BD%E5%90%8D%E5%8D%9A%E5%AE%A2"><span class="toc-number">1.5.</span> <span class="toc-text">5. 修改和重命名博客</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%8D%9A%E5%AE%A2%E5%86%85%E5%AE%B9"><span class="toc-number">1.5.1.</span> <span class="toc-text">修改博客内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E5%91%BD%E5%90%8D%E5%8D%9A%E5%AE%A2"><span class="toc-number">1.5.2.</span> <span class="toc-text">重命名博客</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2"><span class="toc-number">1.6.</span> <span class="toc-text">6. 部署博客</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80%EF%BC%9A%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E9%83%A8%E7%BD%B2"><span class="toc-number">1.6.1.</span> <span class="toc-text">方法一：使用命令行部署</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C%EF%BC%9A%E4%BD%BF%E7%94%A8%E6%89%B9%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6-%E8%84%9A%E6%9C%AC%E9%83%A8%E7%BD%B2"><span class="toc-number">1.6.2.</span> <span class="toc-text">方法二：使用批处理文件&#x2F;脚本部署</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E5%90%8E%E6%9F%A5%E7%9C%8B"><span class="toc-number">1.6.3.</span> <span class="toc-text">部署后查看</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3"><span class="toc-number">1.7.</span> <span class="toc-text">7. 常见问题解决</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%8D%E5%B7%A5%E4%BD%9C%EF%BC%9F"><span class="toc-number">1.7.1.</span> <span class="toc-text">命令行不工作？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%EF%BC%9F"><span class="toc-number">1.7.2.</span> <span class="toc-text">图片无法显示？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E5%A4%B1%E8%B4%A5%EF%BC%9F"><span class="toc-number">1.7.3.</span> <span class="toc-text">部署失败？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E8%BF%9B%E9%98%B6%E6%8A%80%E5%B7%A7"><span class="toc-number">1.8.</span> <span class="toc-text">8. 进阶技巧</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E8%8D%89%E7%A8%BF"><span class="toc-number">1.8.1.</span> <span class="toc-text">创建草稿</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B0%B8%E4%B9%85%E9%93%BE%E6%8E%A5"><span class="toc-number">1.8.2.</span> <span class="toc-text">自定义永久链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%A0%87%E7%AD%BE%E5%92%8C%E5%88%86%E7%B1%BB"><span class="toc-number">1.8.3.</span> <span class="toc-text">使用标签和分类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E6%80%BB%E7%BB%93"><span class="toc-number">1.9.</span> <span class="toc-text">9. 总结</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/05/12/FunctionCallingVsMCP/" title="FunctionCallingVsMCP">FunctionCallingVsMCP</a><time datetime="2025-05-12T02:38:41.000Z" title="发表于 2025-05-12 10:38:41">2025-05-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/23/%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8BLLM%E7%9A%84%E8%AF%84%E6%B5%8B%E5%9F%BA%E5%87%86%E6%95%B0%E6%8D%AE%E9%9B%86/" title="大语言模型LLM的评测基准数据集">大语言模型LLM的评测基准数据集</a><time datetime="2024-09-23T02:30:15.000Z" title="发表于 2024-09-23 10:30:15">2024-09-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/22/hexo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" title="Hexo博客使用教程：从创建到部署的完整指南">Hexo博客使用教程：从创建到部署的完整指南</a><time datetime="2024-09-22T07:00:00.000Z" title="发表于 2024-09-22 15:00:00">2024-09-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/19/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%87%E4%BB%BD%E4%B8%8E%E6%81%A2%E5%A4%8D/" title="mysql数据库备份与恢复">mysql数据库备份与恢复</a><time datetime="2024-09-19T14:40:40.000Z" title="发表于 2024-09-19 22:40:40">2024-09-19</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2024 - 2025 By daxiong</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-fluttering-ribbon.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
